@@ -42,6 +42,16 @@ public class VehicleModel {
 		this.type = type;
 	}
 
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getModelName() {
 		return modelName;
 	}

@@ -34,7 +34,7 @@ public class VehicleModelController {
 	}
 
 	@PostMapping("/createmodel")
-	public VehicleModel createModel(@RequestBody VehicleModel vehicleModel) {
+	public VehicleModel createModel(@RequestBody VehicleModel vehicleModel) {		
 		return modelRepository.save(vehicleModel);
 	}
 
@@ -46,7 +46,7 @@ public class VehicleModelController {
 	}
 
 	@PutMapping("/model/{id}")
-	public ResponseEntity<VehicleModel> updateEmployee(@PathVariable Long id,
+	public ResponseEntity<VehicleModel> updateModel(@PathVariable Long id,
 			@RequestBody VehicleModel vechicleDetails) {
 		VehicleModel vehicleModel = modelRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Model not exist with id :" + id));
